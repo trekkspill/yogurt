@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greek Yogurt 🥛</title>
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            width: 50%;
+            height: auto;
+            margin: 10px 0;
+        }
+
+        .photo-collage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns of equal size */
+    grid-gap: 10px; /* Space between images */
+    }
+
+        .photo-collage img {
+            width: 100%;
+            height: auto;
+             object-fit: cover; /* Ensures the images cover the grid area */
+    }
+        .text-frame {
+            border: 2px solid #4a420a00; 
+            padding: 10px; 
+            margin: 20px; 
+            background-color: #f0f0f0; 
+            width: 50%; 
+            margin-left: auto; 
+            margin-right: auto; 
+    }
+            .left-aligned-item {
+            text-align: left;
+    }
+        ul {
+            list-style: none; /
+            display: grid;
+            grid-template-columns: max-content;
+            gap: 10px;
+            padding: 0;
+    }
+
+        ul li {
+        padding-left: 20px; 
+        text-indent: -20px; 
+        margin-bottom: 10px;
+    }
+
+        .buy-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .buy-button:hover {
+            background-color: #45a049;
+        }
+
+        .learn-more {
+            text-decoration: none;
+            color: #008CBA;
+        }
+
+        .footer {
+            font-size: 0.8em;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>I love Yogurt</h1>
+        <h2>Especially Greek Yogurt</h2>
+        <div class="photo-collage">
+        <img src="https://images.eatthismuch.com/site_media/img/254520_ldementhon_71b6a3e2-ec54-48c0-9ba3-73d8596244ae.png"
+            alt="Greek Yogurt" />
+        <img src="https://www.seriouseats.com/thmb/9jHEWvj_g5Gl46G3dO2RWwpxuRU=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2019__06__20190614-yogurt-vicky-wasik-8-1b8381eea1b44c17ac31879c11e6c624.jpg" alt="Greek Yogurt Image 2" />
+        <img src="https://www.allrecipes.com/thmb/XXXrhKInRtkQ2EdErcL9uQ3PLRg=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/214953-Vanilla-Frozen-Yogurt-ddmfs-4x3-2-2733-3aa02fbaca8d489db9ac0b3d1c607441.jpg" alt="Greek Yogurt Image 3" />
+        </div>
+        <p class="text-frame">Strained yogurt, Greek yogurt, yogurt cheese, or sack yoghurt is yogurt that has been strained to remove most
+            of its whey, resulting in a thicker consistency than unstrained yogurt, while preserving yogurt's
+            distinctive sour taste.</p>
+        <p>Yogurts are considered a healthy food choice for several reasons:</p>
+        <ul class="left">
+            <li><strong>Rich in Nutrients</strong>: Yogurt is packed with essential nutrients like calcium, which is crucial for bone health, as well as
+            vitamins B6 and B12, riboflavin, potassium, and magnesium.</li>
+            <li><strong>High in Protein</strong>: Yogurt, especially Greek yogurt, is a great source of protein, which is vital for many bodily
+            processes, including muscle repair and metabolism.</li>
+            <li><strong>Probiotics for Gut Health</strong>: Many yogurts contain live bacteria or probiotics, which can aid in digestion, improve gut
+            health, and even boost the immune system.</li>
+            <li><strong>May Boost Immune System</strong>: Some studies suggest that the probiotics in yogurt can help strengthen the immune system,
+            partly due to the increased production of antibodies and a boost to immune cells.</li>
+        </ul>
+        <a href="https://en.wikipedia.org/wiki/Strained_yogurt" target="_blank" class="learn-more">Learn more on
+            Wikipedia</a>
+        <button class="buy-button">👉 Buy Greek Yogurt</button>
+        <p class="footer">This page was built by <a href="https://www.linkedin.com/in/yana-skliar-2029a6163/" target="_blank">Yana Skliar</a></p>
+    </div>
+    <script>
+        function buy() {
+            let name = prompt('What is your name?');
+            let email = prompt('What is your email address?');
+            let emoji = prompt('What is your favorite emoji?');
+
+        alert(
+            'Thank you, ' +
+            name +
+            '! We will be in touch by email, meanwhile have some yogurt! ' +
+            emoji
+        );
+        }
+
+        const buyButton = document.querySelector('.buy-button');
+        if (buyButton) {
+        document.querySelector('.buy-button').addEventListener('click', function () {
+            this.textContent = 'Added to Cart!';
+            buy();
+        });
+    }
+    </script>
+</body>
+
+</html>
